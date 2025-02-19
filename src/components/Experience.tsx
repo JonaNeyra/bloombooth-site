@@ -18,9 +18,11 @@ const Background = () => {
     const ref = useRef(null);
     const [colorA, setColorA] = useState(getRandomColor());
 
+
     useFrame((_state, delta) => {
-        ref.current.rotation.x =
-            ref.current.rotation.y =
+        // @ts-ignore
+        ref.current.rotation.x = // @ts-ignore
+            ref.current.rotation.y = // @ts-ignore
                 ref.current.rotation.z +=
                     delta * BG_SPEED;
     });

@@ -5,10 +5,20 @@ Command: npx gltfjsx@6.5.3 breakdancer.gltf --typescript
 
 import React, {useRef} from 'react'
 import { useGLTF, PerspectiveCamera } from '@react-three/drei'
+import { Mesh, BufferGeometry, Material } from 'three';
+
+interface GLTFResult {
+    nodes: Record<string, Mesh<BufferGeometry, Material>>;
+    materials: Record<string, Material>;
+}
 
 export function Breakdancer(props: any) {
     const group = useRef(null);
-    const { nodes, materials } = useGLTF('./models/breakdance-boy/breakdancer.gltf')
+    const { nodes, materials } = useGLTF('./models/breakdance-boy/breakdancer.gltf') as unknown as {
+        nodes: Record<string, Mesh<BufferGeometry, Material>>,
+        materials: Record<string, Material>
+    };
+
     return (
         <group ref={group} {...props} dispose={null}>
             <group position={[0, 2.447, -0.049]} scale={[1.244, 1.458, 1.458]}>
