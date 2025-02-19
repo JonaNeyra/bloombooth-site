@@ -33,16 +33,16 @@ export default function Header() {
             {isOpen && (
                 <nav className="flex flex-col space-y-2 sm:hidden mt-3 text-center">
                     <Link href="/" className="text-black">Inicio</Link>
-                    <Link href="/pricing" className="text-black">Tarifas</Link>
-                    <Link href="/contact" className="text-black">Contacto</Link>
+                    {/* <Link href="/pricing" className="text-black">Tarifas</Link> */}
+                    {/* <Link href="/contact" className="text-black">Contacto</Link> */}
                 </nav>
             )}
 
             {/* Menú normal en escritorio */}
             <nav className="hidden sm:flex space-x-4">
                 <Link href="/" className="text-black">Inicio</Link>
-                <Link href="/pricing" className="text-black">Tarifas</Link>
-                <Link href="/contact" className="text-black">Contacto</Link>
+                {/* <Link href="/pricing" className="text-black">Tarifas</Link> */}
+                {/* <Link href="/contact" className="text-black">Contacto</Link> */}
             </nav>
         </header>
     );
