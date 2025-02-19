@@ -3,19 +3,94 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --green: #99B898;
+  --peach: #FECEA8;
+  --salmon: #FF847C;
+  --red: #E84A5F;
+  --dark: #2A363B;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--dark);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header {
+  background-color: rgba(255, 132, 124, 0.9);
+  margin-bottom: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+h1.title{
+  font-size: 1.3rem;
+  color: var(--dark);
+}
+
+h1.index{
+  font-size: 1.3rem;
+  color: var(--green);
+}
+
+.subtitle {
+  color: var(--salmon);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.photo-frame {
+  width: 250px;
+  background: white;
+  padding: 5px;
+  border: 8px solid white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-content {
+  background: var(--salmon);
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.photo-content h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+.photo-content p {
+  font-size: 0.8rem;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+/* 📌 Estilos para computadoras (Mac y PC) */
+.canvas {
+  width: 40vw !important;
+  height: 37vh !important;
 }
